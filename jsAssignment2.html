@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+
+            alert("Create Password. 8 characters, Num  special char set");
+
+            //Counting prompt character numbers
+            var Charset = prompt ("Type your pass");
+            var NumCharset = Charset.length;
+            console.log(NumCharset);
+
+            //pull out Numbers from var Charset 
+            var NumExport = Charset.replace(/[^0-9]/g, "");
+            console.log(NumExport);
+             
+            // //pull out special characters --https://stackoverflow.com/questions/4374822/remove-all-special-characters-with-regexp
+            var SpecialCharExport = Charset.replace(/[^`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi, '');
+            console.log(SpecialCharExport);
+
+
+            // Countiung number of Capital letters in prompt　--https://stackoverflow.com/questions/19171240/counting-upper-and-lower-case-characters-in-a-string
+            var NumCap = NumCharset - Charset.replace(/[A-Z]/g, "").length ;
+            console.log(NumCap);
+
+            if ( NumCap === 0) {
+                console.log("No Caps")
+            }
+            else {
+                console.log("Contains Caps");
+            }
+
+                           
+
+            // Counting Special Characters
+            var NumSpecialChar = NumCharset - Charset.replace(/[^a-zA-Z0-9]/g, "").length ;
+            console.log(NumSpecialChar);
+
+            if ( NumSpecialChar === 0) {
+                console.log("No Special Characters");
+            }
+            else {
+                console.log("Contains Special Characters");
+            }
+
+
+            // //Checking special letters of prompt
+            // var specialCharcheck = Charset.includes("!") || Charset.includes("@") || Charset.includes("#") || Charset.includes("$")  ;
+            // console.log(specialCharcheck);
+
+            // if (specialCharcheck === true ) {
+            //     console.log("Contains Special letters");
+            // }
+            // else {
+            //     console.log("No special letters");
+            // }
+
+            // // Number condition for passward
+            //    if  ( NumExport >= 1) {
+            //        console.log("Numbers in");
+            //    }
+
+            //    else {
+            //        console.log("You have to have at least 1 numbers");
+            //    }
+
+            // // Cnumbers of Character check
+            // if ((NumCharset <= 3) || (NumCharset > 6)) {
+            //     prompt ("Password should be more than 8 CHaracters");
+            //     console.log("Set Password should be more than 8 CHaracters")
+            // }
+
+            // else {
+            //     prompt ("Generate Pass");
+            // }
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>
