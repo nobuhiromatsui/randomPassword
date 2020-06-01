@@ -12,14 +12,21 @@
     <script>
 
 
-        alert("Create Password. 8 characters, Num  special char set");
+        alert("Create yout password. Make sure it is more than 8 characters and contains Numbers, Capital letters and special characters");
 
-     for (var i = 0; i < 10; i++) {
-        var Charset = prompt("Type your pass");
+        
+ 
+        for (var i = 0; i < 3; i++) {
+        var Charset = prompt("Type your password. Make sure it is more than 8 characters and contains Numbers, Capital letters and special characters");
+        console.log(Charset);
 
+
+    
         //Number of characters-letters in prompt
         var NumCharset = Charset.length;
         console.log(NumCharset);
+
+      
 
         //print Numbers in prompt 
         var NumExport = Charset.replace(/[^0-9]/g, "");
@@ -36,31 +43,38 @@
         console.log(NumSpecialChar);
 
 
-        
+    
         // Numbers of Character condition
-        if ((NumCharset >= 3) && (NumCharset < 128) && (NumExport >= 1) && (NumSpecialChar !== 0) && (NumCap !== 0)) {
+        if ((NumCharset >= 8) && (NumCharset < 128) && (NumExport >= 1) && (NumSpecialChar !== 0) && (NumCap !== 0)) {
             alert("Complete criteria for passward. Press button to generate password");
             console.log("Complete criteria for passward. Press button to generate password")
+            break;
         }
 
-        else if ( (NumCap === 0)  ) {
-            alert("Have to have capital letters");
+        else if ( (NumCap === 0) ) {
+          //  alert("Have to have capital letters");
+            prompt("Have to have capital letters" , "Type your pass");
+            
         }
 
         else if ((NumSpecialChar === 0)) {
-            alert("Have to have special characters. Type password again");
+        //    alert("Have to have special characters. Type password again");
+            prompt("Have to have special characters" , "Type your pass");
         }
-        else if ((NumExport = 0)) {
-            alert("Have to have numbers. Type password again");
+        else if ((NumExport === 0)) {
+           // alert("Have to have numbers. Type password again");
+           prompt("Have to have numbers." , "Type your pass");
         }
-        else if (NumCharset <= 3) {
-            alert("Have to have more than 8 characters. Type password again");
+        else if (NumCharset <= 8) {
+         //   alert("Have to have more than 8 characters. Type password again");
+            prompt("Have to have more than 8 characters." , "Type your pass");
         }
         else {
-            alert("Type your password again");
+            prompt("Type your password again");
         }
 
-    }
+ }
+
 
 
 
