@@ -17,7 +17,7 @@
         
  
         for (var i = 0; i < 3; i++) {
-        var Charset = prompt("Type your password. Make sure it is more than 8 characters and contains Numbers, Capital letters and special characters");
+        var Charset = prompt("Make sure it is more than 8 characters and contains Numbers, Capital letters and special characters", "Type your password");
         console.log(Charset);
 
 
@@ -46,8 +46,9 @@
     
         // Numbers of Character condition
         if ((NumCharset >= 8) && (NumCharset < 128) && (NumExport >= 1) && (NumSpecialChar !== 0) && (NumCap !== 0)) {
-            alert("Complete criteria for passward. Press button to generate password");
-            console.log("Complete criteria for passward. Press button to generate password")
+            alert("Your passward is" + " " + Charset );
+            console.log("Complete criteria for passward. Press button to generate password" )
+            
             break;
         }
 
