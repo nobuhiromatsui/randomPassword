@@ -6,21 +6,38 @@ function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
 
-  passwordText.value = password;
 
+  passwordText.value = password;
 }
+
+function generatePassword (){}
+
+
+// // Wrtite Passward into text field in HTML
+// window.onload = function onLoad(){
+//   target = document.getElementById("password");
+//   target.innerHTML =　result;
+//   console.log(result);
+// }
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
 
+
 // Ask number of passward
 var numPass = prompt("Choose number of charasters. It should be 8 < 128");
 
-if ( (numPass >= 8 )&& (numPass <= 128) ) {
-  var len = numPass;
+for (var i = 0; i < numPass; i++) {
+    if ( (numPass <= 8 ) || (numPass >= 128) ) {
+      var numPass = prompt("Choose number of charasters. It should be 8 < 128");
+      var len = numPass;
+    }
+    else {
+      var len = numPass;
+      break;
+    }
 }
-
 
 
 // Ask Special Characters
@@ -37,6 +54,7 @@ var specialChar = "!@#$%^&*()?><+"
 var capLetter = lowercase.toUpperCase();
 
 // Making condition
+
 
 if (conSpecial === true) {
   specialChar = specialChar;
@@ -77,13 +95,26 @@ var strLen = str.length;
 var result = "";
 
 
-// randam choice  
+// randam choice 
+
 for (var i = 0; i < len; i++) {
   result += str[Math.floor(Math.random() * strLen)];
 }
  
-alert(result);
-console.log(result);
+alert("Your Passward is ..." + " " + result);
+
+
+
+
+
+// var generate = document.querySelector(".btn");
+// generate.addEventListener("click", function(){
+
+// });
+
+
+
+
 
 
 
