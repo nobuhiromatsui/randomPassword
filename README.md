@@ -1,3 +1,3 @@
 # week3-HW
 
-Creating passward function using javascript
+Creating secure passward generator with using javascript.
