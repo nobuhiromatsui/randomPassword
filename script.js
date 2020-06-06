@@ -23,7 +23,7 @@ generateBtn.addEventListener("click", writePassword);
 
 // Ask number of passward
 function generatePassword() {
-var numPass = prompt("Choose number of charasters. It should be 8 < 128");
+var numPass = prompt("Choose number of characters. It should be 8 < 128");
 
 
 
