@@ -3,12 +3,14 @@ var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
 function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
 
-  passwordText.value = password;
+    var password = generatePassword();
+    var passwordText = document.querySelector("#password");
+      passwordText.value = password;
 
-
+    var p = document.createElement("p");
+      p.innerHTML = password ;
+      passwordText .append(p);
 
 }
 
@@ -95,19 +97,13 @@ for (var i = 0; i < len; i++) {
   result += str[Math.floor(Math.random() * strLen)];
 }
  
+// return generated password
+return result;
 // alert("Your Passward is ..." + " " + result);
 console.log("Your Passward is ..." + " " + result);
+
 }
 
-// Calling generatePassword(); function 
-
-// writePassword();
-
-
-// var generate = document.querySelector(".btn");
-// generate.addEventListener("click", function(){
-
-// });
 
 
 
