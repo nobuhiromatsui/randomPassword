@@ -6,7 +6,7 @@ live site: https://nobuhiromatsui.github.io/randomPassword/
 Open the link, you would ask criteria.
 Then you would get your own password based on your answer/inoput.
 
-<h3>Technica</h3>
+<h3>Technical details</h3>
 <ul>
   <li>html</li>
   <li>CSS</li>
